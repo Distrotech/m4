@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>M4 by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>M4</h1>
+          <h2>Mirror of git://git.savannah.gnu.org/m4.git</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/m4/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/m4/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/m4" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>GNU <code>m4' is an implementation of the traditional Unix macro
+processor.  It is mostly SVR4 compatible, although it has some
+extensions (for example, handling more than 9 positional parameters
+to macros).</code>m4' also has builtin functions for including files,
+running shell commands, doing arithmetic, etc.  Autoconf needs GNU
+<code>m4' for generating</code>configure' scripts, but not for running them.</p>
+
+<p>GNU `m4' was originally written by Rene' Seindal, from Denmark.</p>
+
+<p>GNU `m4' has a web site at <a href="http://www.gnu.org/software/m4/">http://www.gnu.org/software/m4/</a>.</p>
+
+<p>If GNU <code>m4' is meant to serve GNU</code>autoconf', beware that <code>m4'
+should be fully installed *prior to* configuring</code>autoconf' itself.
+Likewise, if you intend on hacking GNU <code>m4' from git, the bootstrap
+process requires that you first install a released copy of GNU</code>m4'.</p>
+
+<p>If you are just trying to build <code>m4' from a released tarball, you
+should not normally need to run</code>./bootstrap' or <code>autoreconf'; just go
+ahead and start with</code>./configure'.  If you are trying to build `m4'
+from git, more information can be found in the version-control-only
+file HACKING.</p>
+
+<p>In the subdirectories <code>tests' and</code>examples' you will find various m4
+files, ranging from trivial test files to rather advanced macros.  If
+you intend to use m4 seriously, you might find useful material down
+there.</p>
+
+<p>See file <code>COPYING' for copying conditions.
+See file</code>INSTALL' for compilation and installation instructions.
+See file <code>ABOUT-NLS' for how to customize this program to your language.
+See file</code>NEWS' for a list of major changes in the current release.
+See file <code>AUTHORS' for the names of maintainers.
+See file</code>THANKS' for a list of contributors.</p>
+
+<p>By using `./configure --with-gmp, you get multiple precision integral
+and rational arithmetic using mpeval.  The implementation depends on the
+GNU gmp v2 library.</p>
+
+<p>By using <code>./configure --with-modules=</code>foo bar baz', you get an m4 with only
+the named modules preloaded.  The default modules (preloaded if you do not
+use this option) are sufficient to do the job of GNU m4-1.4.  Additional
+modules may be desirable, or necessary if libltdl does not support your
+host architecture.  The implementation uses libltdl interface, details of
+which are in the libtool manual.  See file `modules/README' for a more
+detailed description.</p>
+
+<p>By default, the <code>syscmd' and</code>esyscmd' macros try to use the first
+instance of <code>sh' found by</code>command -p getconf PATH' at configure time,
+with a default of <code>/bin/sh'.  If that default is inappropriate, you
+can use</code>./configure --with-syscmd-shell=location' to specify the
+shell to use.</p>
+
+<p>By using `./configure --with-dmalloc', GNU m4 is linked with Gray
+Watson's dmalloc package.  It is a debugging option for finding memory
+management problems.  Gray Watson's dmalloc package is available at
+<a>ftp://ftp.letters.com/src/dmalloc/dmalloc.tar.gz</a>.</p>
+
+<p>GNU M4 uses GNU Libtool in order to build shared libraries on a
+variety of systems.  While this is very nice for making usable
+binaries, it can be a pain when trying to debug a program. For that
+reason, compilation of shared libraries can be turned off by
+specifying the <code>--disable-shared' option to</code>configure'.  However,
+without shared libraries, modules that are not preloaded will not be
+available for use.</p>
+
+<p>Send bug reports, comments or ideas to `<a href="mailto:bug-m4@gnu.org">bug-m4@gnu.org</a>'.  A bug report
+is an adequate description of the problem: your input, what you
+expected, what you got, and why this is wrong.  Diffs are welcome, but
+they only describe a solution, from which the problem might be uneasy to
+infer.  Don't forget all relevant information about your operating
+system, compiler, libraries, ...</p>
+
+<p>The easiest way to remember this information is by using the
+testsuite.  Any test failures are automatically logged, along with
+lots of useful information about your setup; simply mailing
+tests/testsuite.log to `<a href="mailto:bug-m4@gnu.org">bug-m4@gnu.org</a>' is a good start.  If you want
+to dive in and debug a failure, you may find it useful to fine-tune
+the execution of the testsuite.  For example, running test 12 in
+verbose mode can be done with:</p>
+
+<p>make check TESTSUITEFLAGS='-v -d -x 12'</p>
+
+<p>The testsuite understands --help to tell you more about the current
+set of tests.</p>
+
+<h1></h1>
+
+<p>Copyright (C) 2000, 2005, 2006, 2007, 2009, 2010 Free Software
+Foundation, Inc.</p>
+
+<p>Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+Texts.  A copy of the license is included in the ``GNU Free
+Documentation License'' file as part of this distribution.</p>
+        </section>
+
+        <footer>
+          M4 is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

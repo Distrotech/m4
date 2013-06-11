@@ -1,7 +1,7 @@
 This is m4.info, produced by makeinfo version 4.13 from m4.texinfo.
 
-This manual (10 June 2013) is for GNU M4 (version 1.4.16-dirty), a
-package containing an implementation of the m4 macro language.
+This manual (10 June 2013) is for GNU M4 (version 1.4.16), a package
+containing an implementation of the m4 macro language.
 
    Copyright (C) 1989-1994, 2004-2011 Free Software Foundation, Inc.
 
